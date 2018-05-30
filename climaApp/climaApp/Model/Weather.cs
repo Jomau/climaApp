@@ -2,7 +2,7 @@
 //
 //    using climaApp.Model;
 //
-//    var welcome = Welcome.FromJson(jsonString);
+//    var Weather = Weather.FromJson(jsonString);
 
 namespace climaApp.Model
 {
@@ -235,14 +235,14 @@ namespace climaApp.Model
         public string Speed { get; set; }
     }
 
-    public partial class Welcome
+    public partial class Weather
     {
-        public static Welcome FromJson(string json) => JsonConvert.DeserializeObject<Welcome>(json, climaApp.Model.Converter.Settings);
+        public static Weather FromJson(string json) => JsonConvert.DeserializeObject<Weather>(json, climaApp.Model.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome self) => JsonConvert.SerializeObject(self, climaApp.Model.Converter.Settings);
+        public static string ToJson(this Weather self) => JsonConvert.SerializeObject(self, climaApp.Model.Converter.Settings);
     }
 
     internal static class Converter

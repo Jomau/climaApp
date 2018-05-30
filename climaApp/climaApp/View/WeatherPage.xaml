@@ -36,10 +36,10 @@
                 <Label Text="Última Actualización" Grid.Column="0" Grid.Row="4"/>
                 <Label Text="{Binding UltimaActualizacion}" Grid.Column="1" Grid.Row="4"/>
                 <Label Text="Temperatura" Grid.Column="0" Grid.Row="5"/>
-                <Label Text="{Binding temperatura}" Grid.Column="1" Grid.Row="5"/>
+                <Label Text="{Binding Temperatura}" Grid.Column="1" Grid.Row="5"/>
                 <Label Text="Clima" Grid.Column="0" Grid.Row="6"/>
                 <Label Text="{Binding Clima}" Grid.Column="1" Grid.Row="6"/>
-                <Image Source="{Binding Ubicacion}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="7"/>
+                <Image Source="{Binding Imagen}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="7"/>
                 <Button Text="Hola"  Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="8"/>
             </Grid>
         </StackLayout>
