@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:clVM="clr-namespace:climaApp.ViewModel"
+             x:Class="climaApp.View.WeatherPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <clVM:WeatherPageViewModel x:Key="WeatherPVM"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Source={StaticResource WeatherPVM}}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <SearchBar Placeholder="Ingrese la Ciudad" Text="{Binding ResulTerm}" SearchCommand="{Binding BuscarCommand}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Ubicación" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="{Binding Ubicacion}" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="País" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="{Binding Pais}" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="Región" Grid.Column="0" Grid.Row="3"/>
+                <Label Text="{Binding Region}" Grid.Column="1" Grid.Row="3"/>
+                <Label Text="Última Actualización" Grid.Column="0" Grid.Row="4"/>
+                <Label Text="{Binding UltimaActualizacion}" Grid.Column="1" Grid.Row="4"/>
+                <Label Text="Temperatura" Grid.Column="0" Grid.Row="5"/>
+                <Label Text="{Binding temperatura}" Grid.Column="1" Grid.Row="5"/>
+                <Label Text="Clima" Grid.Column="0" Grid.Row="6"/>
+                <Label Text="{Binding Clima}" Grid.Column="1" Grid.Row="6"/>
+                <Image Source="{Binding Ubicacion}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="7"/>
+                <Button Text="Hola"  Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="8"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
